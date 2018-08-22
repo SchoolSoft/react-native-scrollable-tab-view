@@ -7,11 +7,13 @@ const StaticContainer = require('./StaticContainer');
 
 const SceneComponent = (Props) => {
   const {shouldUpdated, ...props, } = Props;
-  return <View {...props}>
+  return (
+    <View {...props}>
       <StaticContainer shouldUpdate={shouldUpdated}>
         {props.children}
       </StaticContainer>
-  </View>;
+    </View>
+  );
 };
 
 module.exports = SceneComponent;
